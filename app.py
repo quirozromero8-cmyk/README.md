@@ -4,6 +4,8 @@ import streamlit as st
 
 car_data = pd.read_csv('vehicles_us.csv')
 
+st.title('Anaálisis de datos de anuncios de venta de coches usados en USA')
+
 hist_button = st.button('Construir histograma')
 
 if hist_button:
@@ -15,7 +17,6 @@ if hist_button:
     fig.update_layout(title_text='Distribución del Odómetro')
 
     st.plotly_chart(fig, use_container_width=True)
-
 scatter_button = st.button('Construir gráfico de dispersión')
 
 if scatter_button:
